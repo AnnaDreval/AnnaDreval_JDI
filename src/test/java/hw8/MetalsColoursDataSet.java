@@ -29,7 +29,7 @@ public class MetalsColoursDataSet extends TestBase {
         metalsColoursPage.form.submit();
 
         //4 Check result section:
-        metalsColoursPage.resultForm.checkResultSection(metalsColoursPage.form.results(data));
+        metalsColoursPage.result.checkResultSection(metalsColoursPage.result.results(data));
 
     }
 

@@ -8,10 +8,6 @@ import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.object
 import dataProviders.MetalsColorsData;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static enums.Results.*;
 import static enums.Vegetables.VEGETABLES;
 
 public class MetalColorsForm extends Form<MetalsColorsData> {
@@ -62,16 +58,6 @@ public class MetalColorsForm extends Form<MetalsColorsData> {
         metals.select(data.metals);
         if (vegetables.getValue().equals(VEGETABLES.toString())) vegetables.select(VEGETABLES.toString());
         for (String vegetable : data.vegetables) vegetables.select(vegetable);
-    }
-
-    public List<String> results(MetalsColorsData data) {
-        List<String> results = new ArrayList<>();
-        results.add(SUM.title + String.valueOf(data.summary.get(0) + data.summary.get(1)));
-        results.add(ELEM.title + String.join(", ", data.elements));
-        results.add(COLOR.title + data.color);
-        results.add(METAL.title + data.metals);
-        results.add(VEG.title + String.join(", ", data.vegetables));
-        return results;
     }
 
 }

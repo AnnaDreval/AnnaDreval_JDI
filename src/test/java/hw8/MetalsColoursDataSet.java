@@ -30,7 +30,6 @@ public class MetalsColoursDataSet extends TestBase {
 
         //4 Check result section:
         metalsColoursPage.result.checkResultSection(metalsColoursPage.result.results(data));
-
     }
 
 }
